@@ -9,20 +9,19 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio website complete</title>
+        <title>Portfolio</title>
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Marlon</a>
+                    <a href="#" class="nav__logo">Jed Kerk Cuevas</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
@@ -38,17 +37,29 @@
         <main class="l-main">
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
+                <canvas id="bg-canvas" aria-hidden="true"></canvas>
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Marlon</span><br> Web Designer</h1>
+                    <h3 class="hello">HELLO!</h3>
 
-                    <a href="#" class="button">Contact</a>
-                </div>
+                    <h1 class="intro">
+                        I'm <span>Jed Kerk Cuevas</span>
+                    </h1>
 
-                <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
+                    <h2 class="role">
+                        A <span id="typed-text"></span>
+                    </h2>
+
+                    <p class="home-desc">
+                        I am a passionate full-stack developer with expertise in React, 
+                        Django, and MySQL, focused on creating seamless, user-centered web 
+                        applications. With experience in managing projects for inventory, sales, 
+                        and forecasting systems, I am skilled in development and problem-solving, providing scalable 
+                        solutions that address real-world business challenges. 
+                    </p>
+
+                     <a href="#work" class="button">Projects</a>
+                    </div>
+
 
                 <div class="home__img">
                     <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -57,117 +68,134 @@
                         </mask>
                         <g mask="url(#mask0)">
                             <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
+                            <image class="home__blob-img" x="50" y="80" width="360" height="390" href="./assets/img/aboutme.jpg" xlink:href="./assets/img/aboutme.jpg"/>
+
                         </g>
                     </svg>
                 </div>
             </section>
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Marlon</h2>
-                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
-                    </div>                                   
-                </div>
-            </section>
-
+            <!--===== SKILLS =====-->
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">Skills</h2>
 
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
+            <div class="skills__container bd-grid">
+                <div class="skills__panel">
+                <h3 class="skills__subtitle">Professional Skills</h3>
+                <p class="skills__text">Tools and technologies I use for building projects.</p>
 
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
+                <!-- Tabs -->
+                <div class="skills__tabs">
+                    <button class="skills__tab active" data-skill-tab="all">All</button>
+                    <button class="skills__tab" data-skill-tab="languages">Languages</button>
+                    <button class="skills__tab" data-skill-tab="frameworks">Frameworks & Libraries</button>
+                    <button class="skills__tab" data-skill-tab="databases">Databases</button>
+                    <button class="skills__tab" data-skill-tab="tools">Tools & Platforms</button>
                 </div>
+
+                <!-- Icon Grid (auto-filled by JS) -->
+                <div class="skills__grid" id="skillsGrid"></div>
+                </div>
+
+                <div class="skills__visual">
+                <img src="assets/img/work3.jpg" alt="Skills Preview" class="skills__img">
+                </div>
+            </div>
             </section>
+
+
+
 
             <!--===== WORK =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
+            <h2 class="section-title">Work</h2>
 
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
+            <div class="work__container bd-grid">
+
+                <!-- PROJECT 1 -->
+                <div class="work__card">
+                <span class="work__status">COMPLETED</span>
+
+                <div class="work__carousel"
+                    data-images='[
+                    "assets/img/login.png",
+                    "assets/img/dashboard.png",
+                    "assets/img/product.png"
+                    ]'>
+                    <img class="work__carousel-img" src="assets/img/login.png" alt="POS Inventory System">
+
+                    <button class="work__carousel-btn work__carousel-prev">‹ PREV</button>
+                    <button class="work__carousel-btn work__carousel-next">NEXT ›</button>
+
+                    <div class="work__carousel-dots"></div>
                 </div>
+
+                <h3 class="work__title">POS Inventory System</h3>
+                <p class="work__desc">
+                    A comprehensive system for managing inventory, sales, and user roles with
+                    stock tracking and automated transaction codes.
+                </p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="work__card">
+                <span class="work__status">COMPLETED</span>
+
+                <div class="work__carousel"
+                    data-images='[
+                    "assets/img/gimme1.jpg",
+                    "assets/img/gimme3.png",
+                    "assets/img/gimme2.png"
+                    ]'>
+                    <img class="work__carousel-img" src="assets/img/gimme1.jpg" alt="Gimme Five Game">
+
+                    <button class="work__carousel-btn work__carousel-prev">‹ PREV</button>
+                    <button class="work__carousel-btn work__carousel-next">NEXT ›</button>
+
+                    <div class="work__carousel-dots"></div>
+                </div>
+
+                <h3 class="work__title">Gimme Five Game</h3>
+                <p class="work__desc">
+                    An interactive game designed for CTU Game Night. It engages participants in a dynamic, competitive environment, focusing on quick thinking and teamwork. The game incorporates real-time responses and user interaction, providing an engaging and fun experience for players.
+                </p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="work__card">
+                <span class="work__status">COMPLETED</span>
+
+                <div class="work__carousel"
+                    data-images='[
+                    "assets/img/weather1.png",
+                    "assets/img/weather2.png",
+                    "assets/img/weather3.png"
+                    ]'>
+                    <img class="work__carousel-img" src="assets/img/weather1.png" alt="Weather Forecast">
+
+                    <button class="work__carousel-btn work__carousel-prev">‹ PREV</button>
+                    <button class="work__carousel-btn work__carousel-next">NEXT ›</button>
+
+                    <div class="work__carousel-dots"></div>
+                </div>
+
+                <h3 class="work__title">Weather Forecast </h3>
+                <p class="work__desc">
+                   This Weather Forecast Web Application is a Streamlit-based Python app that provides up to 10-day forecasts for locations in the Philippines, displaying temperature, wind, humidity, and weather conditions on an interactive map.
+                </p>
+                </div>
+
+            </div>
+
+            <!-- ===== LIGHTBOX (ZOOM OVERLAY) ===== -->
+            <div class="work__lightbox" id="workLightbox" aria-hidden="true">
+                <button class="work__lightbox-close" type="button" aria-label="Close">×</button>
+                <img class="work__lightbox-img" src="" alt="Preview">
+            </div>
             </section>
+
+
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
@@ -185,14 +213,14 @@
         </main>
 
         <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Marlon</p>
+        <footer class="footer" >
+            <p class="footer__title">Jed Kerk Cuevas</p>
             <div class="footer__social">
                 <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
                 <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
                 <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+            <p class="footer__copy">© 2025 Jed Kerk Cuevas. All rights reserved.</p>
         </footer>
 
 
@@ -201,5 +229,9 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <script src="./assets/js/background.js"></script>
+        <script src="assets/js/autotype.js"></script>
+        <script src="assets/js/work-carousel.js"></script>
+        <script src="assets/js/skills.js"></script>
     </body>
 </html>
