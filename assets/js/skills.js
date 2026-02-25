@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Grouping based on your tab names
   const groups = {
-    languages: ["HTML5", "CSS3", "JavaScript", "Java", "Python", "C++", "ReactJS"],
+    languages: ["HTML5", "CSS3", "JavaScript", "Java", "Python", "C++", "ReactJS","NextJs"],
     frameworks: ["REST API", "Django"],
     databases: ["MySQL", "Firebase"],
     tools: [ "NodeJS", "Git VCS", "GitHub", "VScode", "Flutter", "Android"],

@@ -58,6 +58,10 @@
         "icon": "assets/img/github3.png"
     },
     {
+        "name": "NextJs",
+        "icon": "assets/img/nextjs.png"
+    },
+    {
         "name": "Flutter",
         "icon": "assets/img/flutter-removebg-preview.png"
     },

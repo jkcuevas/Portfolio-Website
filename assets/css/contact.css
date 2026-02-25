@@ -1,0 +1,195 @@
+/* General Contact Form Styling */
+.contact__input {
+  width: 100%;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+  padding: 1rem;
+  border-radius: 0.9rem;
+  outline: none;
+  margin-bottom: var(--mb-4);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1.5px solid rgba(2, 6, 23, 0.14);
+  color: var(--text);
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.contact__input:focus {
+  border-color: rgba(34, 211, 238, 0.55);
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.14);
+}
+
+.contact__button {
+  display: block;
+  border: none;
+  outline: none;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Success notification container */
+#success-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the notification */
+  background-color: #f4fff8; /* Light greenish background for freshness */
+  color: #53ee34; /* Green text */
+  padding: 20px 40px;
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: 500;
+  text-align: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.4s ease-in-out; /* Smoother transition */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Increased space between icon and text */
+  pointer-events: none; /* Prevent interaction with underlying content */
+  max-width: 450px; /* Increased max width for better readability */
+  width: 100%;
+  padding-top: 25px; /* More space for top */
+  padding-bottom: 25px; /* More space for bottom */
+}
+
+#success-notification h3 {
+  position: absolute; /* Absolute positioning */
+  top: 150px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%); /* Center the text horizontally */
+  z-index: 3; /* Ensure it's in front of the image */
+  margin: 0; /* Remove any default margins */
+  font-size: 1.5rem; /* Adjust size if needed */
+}
+
+#success-notification p:first-of-type {
+  margin-top: 60px; /* Adjust top margin for the first paragraph */
+}
+
+#success-notification.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05); /* Smooth scale-in effect */
+  pointer-events: all; /* Enable interaction with the notification */
+}
+
+/* Icon inside notification (Success Image) */
+#success-notification .icon-container {
+  width: 130px; /* Fixed width for the container */
+  height: 130px; /* Fixed height for the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px; /* More space between icon and message */
+  opacity: 1;
+  animation: pulse 1.5s ease-in-out infinite; /* Continuous pulse animation */
+}
+
+/* Image Style */
+.success-icon {
+  z-index: 3;
+  width: 100%; /* Make the width responsive to the container */
+  max-width: 160px;  /* Maximum size */
+  height: 100%; /* Ensure the image maintains its aspect ratio */
+  max-height: 160px; /* Maximum height */
+  object-fit: contain; /* Ensure the image fits within the box */
+  opacity: 1; /* Ensure the image is visible */
+  visibility: visible; /* Ensure the image is visible */
+}
+
+/* Adjust the image size on smaller screens */
+@media (max-width: 768px) {
+  .success-icon {
+    max-width: 140px;  /* Set a smaller max width on tablets */
+    max-height: 140px; /* Set a smaller max height on tablets */
+  }
+}
+
+/* Adjust the image size on mobile screens */
+@media (max-width: 480px) {
+  .success-icon {
+    max-width: 120px;  /* Set a smaller max width on mobile */
+    max-height: 120px; /* Set a smaller max height on mobile */
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Button style (Full width button) */
+.continue-button {
+  padding: 14px 50px;
+  background: linear-gradient(90deg, var(--first-color), var(--first-color-2), var(--accent-3));
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 14px 34px rgba(34, 211, 238, 0.18), 0 12px 28px rgba(59, 130, 246, 0.14);
+  color: white;
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  width: 100%; /* Full width button */
+  max-width: 270px; /* Max width for consistency */
+  text-align: center;
+  margin-top: 20px; /* Proper spacing between message and button */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.continue-button:hover {
+  background-color: #41c128; /* Slightly darker shade on hover */
+  transform: translateY(-4px); /* Subtle hover effect */
+}
+
+.continue-button:active {
+  transform: translateY(2px); /* Slight click effect */
+}
+
+/* Loading Spinner styles */
+#loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+  color: #34d3ee; /* Light blue color */
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading:after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #34d3ee;
+  animation: spin 2s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

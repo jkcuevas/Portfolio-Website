@@ -1,0 +1,20 @@
+/* ===== WORK ===== */
+.work__container{
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+@media screen and (min-width: 768px){
+  .work__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px){
+  .work__container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
